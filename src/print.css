@@ -1,0 +1,79 @@
+/* ── Print Styles ── */
+@media print {
+
+    /* Force light background */
+    body,
+    #root,
+    #root>div {
+        background: #fff !important;
+        color: #1a1a2e !important;
+    }
+
+    /* Hide interactive elements */
+    nav,
+    .bottom-nav,
+    .step-dots,
+    .ambient-glow,
+    .progress-header-btn,
+    .reset-btn,
+    .summary-overlay {
+        display: none !important;
+    }
+
+    /* Hide fixed bottom navigation */
+    div[style*="position: fixed"] {
+        display: none !important;
+    }
+
+    /* Make all text dark */
+    h1,
+    h2,
+    h3,
+    p,
+    span,
+    div,
+    button {
+        color: #1a1a2e !important;
+        -webkit-text-fill-color: #1a1a2e !important;
+        background: none !important;
+        background-clip: unset !important;
+        -webkit-background-clip: unset !important;
+        text-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    /* Cards get visible borders */
+    div[style*="borderRadius: 14"],
+    div[style*="borderRadius: 12"] {
+        border: 1px solid #ddd !important;
+        background: #fafafa !important;
+    }
+
+    /* Phase accent colors stay in headers */
+    div[style*="textTransform"] {
+        color: #444 !important;
+    }
+
+    /* Numbered circles */
+    span[style*="borderRadius"] {
+        background: #eee !important;
+        color: #333 !important;
+    }
+
+    /* Page layout */
+    main {
+        padding: 0 !important;
+        max-width: 100% !important;
+    }
+
+    header {
+        border-bottom: 2px solid #ddd !important;
+        padding-bottom: 16px !important;
+    }
+
+    /* Clean page breaks */
+    @page {
+        margin: 1in;
+        size: letter;
+    }
+}
